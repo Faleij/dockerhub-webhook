@@ -34,7 +34,7 @@ tap.test('dockerhubCallback invalid URI', (t) => {
 
 tap.test('dockerhubCallback callback off', (t) => {
   const options = {
-    callbackUrl: 'https://maccyber.io/api/test',
+    callbackUrl: 'https://faleij.runkit.io/dockerhub-callback/branches/master',
     callbackDisable: true
   }
   return dockerhubCallback(options)
@@ -45,7 +45,7 @@ tap.test('dockerhubCallback callback off', (t) => {
 
 tap.test('dockerhubCallback', (t) => {
   const options = {
-    callbackUrl: 'https://maccyber.io/api/test'
+    callbackUrl: 'https://faleij.runkit.io/dockerhub-callback/branches/master'
   }
   return dockerhubCallback(options)
   .then((data) => {
