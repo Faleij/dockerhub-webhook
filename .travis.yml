@@ -3,3 +3,4 @@ node_js:
   - "7"
 after_success:
   - npm run coveralls
+  - curl --data build=true -X POST https://registry.hub.docker.com/u/maccyber/dockerhub-webhook-api/trigger/$triggerToken/
