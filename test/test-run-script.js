@@ -76,12 +76,12 @@ tap.test('runScript run through with parameters', (t) => {
 
 tap.test('runScript run function through with parameters', (t) => {
   const options = {
-    script: (pushData) => `${pushData} test`,
-    pushData: 'pushData'
+    script: (pushData) => `${pushData} baz`,
+    pushData: 'fooBar'
   }
   runScript(options)
   .then((data) => {
-    t.equal(data.description, 'Running dummy script\npushData test\n', 'runScript runs ok')
+    t.equal(data.description, 'fooBar baz', 'runScript runs ok')
     t.end()
   })
   .catch((err) => {
